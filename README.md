@@ -2,6 +2,12 @@
 
 iOS SwiftUI coding challenge for Fetch to display list of desserts using MealDB.
 
+<p float="left">
+  <img src="https://github.com/timmypass17/FetchDessert/blob/main/desserts.png" width=25% height=25%>
+  <img src="https://github.com/timmypass17/FetchDessert/blob/main/dessertsDetail.png" width=25% height=25%>
+<p>
+
+
 ## Getting Started
 
 ### Prerequisites
