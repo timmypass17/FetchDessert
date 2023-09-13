@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "F5BD9266-48BB-4E9A-AEF2-546A8BDA461A",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:FetchDessert.xcodeproj",
+      "identifier" : "326F85E32AB13DB700DCD217",
+      "name" : "FetchDessert"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:FetchDessert.xcodeproj",
+        "identifier" : "326F86182AB13E2500DCD217",
+        "name" : "FetchDessertTests"
+      }
+    }
+  ],
+  "version" : 1
+}
