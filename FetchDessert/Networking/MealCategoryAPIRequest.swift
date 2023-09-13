@@ -20,7 +20,7 @@ struct MealCategoryAPIRequest: APIRequest {
     }
 
     func decodeResponse(data: Data) throws -> [Meal] {
-        let mealReponse = try JSONDecoder().decode(MealResponse.self, from: data)
+        let mealReponse = try JSONDecoder().decode(MealCategoryResponse.self, from: data)
         return mealReponse.meals
     }
 }

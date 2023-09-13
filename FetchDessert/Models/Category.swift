@@ -11,7 +11,7 @@ enum Category: String, CustomStringConvertible {
     case dessert
     case beef
     case chicken
-    // etc...
+    // add additional categories here
     
     var description: String {
         return self.rawValue.capitalized

@@ -11,7 +11,7 @@ import XCTest
 final class FetchDessertTests: XCTestCase {
 
     func testDecodingMealCategoryResponse() throws {
-        let mealDetailReponse = try JSONDecoder().decode(MealResponse.self, from: mealsData)
+        let mealDetailReponse = try JSONDecoder().decode(MealCategoryResponse.self, from: mealsData)
         let meals = mealDetailReponse.meals
         XCTAssertEqual(meals.count, 5)
         XCTAssertEqual(meals.first!.id, "53049")

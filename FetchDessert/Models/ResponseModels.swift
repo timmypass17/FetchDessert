@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MealResponse: Codable {
+struct MealCategoryResponse: Codable {
     var meals: [Meal]
 }
 

@@ -11,15 +11,17 @@ import Foundation
 class MealListViewModel: ObservableObject {
     @Published var meals: [Meal] = []
     @Published var isLoading = true
+    @Published var showAlert = false
+
     var category: Category
 
     init(category: Category) {
         self.category = category
         Task {
-            if let meals = await fetchMealsBy(category: category) {
+            if let meals = await fetchMealsBy(category: .dessert) {
                 self.meals = meals
             } else {
-                // Show error to user
+                showAlert = true
             }
             isLoading = false
         }

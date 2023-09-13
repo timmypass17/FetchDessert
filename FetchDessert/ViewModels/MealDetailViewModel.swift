@@ -12,13 +12,14 @@ class MealDetailViewModel: ObservableObject {
     @Published var mealDetail: MealDetail?
     @Published var isLoading = true
     @Published var isInstructionsExpanded = false
+    @Published var showAlert = false
     
     init(meal: Meal) {
         Task {
             if let mealDetail = await fetchMealsBy(id: meal.id) {
                 self.mealDetail = mealDetail
             } else {
-                // Show error to user
+                showAlert = true
             }
             isLoading = false
         }

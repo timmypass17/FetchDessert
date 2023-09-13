@@ -30,6 +30,11 @@ struct MealListView: View {
                     ProgressView()
                 }
             }
+            .alert("Error fetching dessert info.",
+                   isPresented: $mealListViewModel.showAlert) {
+            } message: {
+                Text("Please check your Wi-Fi or mobile data and try again.")
+            }
         }
     }
 }

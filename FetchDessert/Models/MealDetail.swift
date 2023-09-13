@@ -13,6 +13,7 @@ struct MealDetail: Codable, Identifiable {
     var instructions: String
     var ingredients: [Ingredient] = []
 
+    // Static JSON keys
     private enum CodingKeys: String, CodingKey {
         case id = "idMeal"
         case name = "strMeal"
@@ -39,7 +40,7 @@ struct MealDetail: Codable, Identifiable {
         self.id = try values.decode(String.self, forKey: .id)
         self.name = try values.decode(String.self, forKey: .name)
         self.instructions = try values.decode(String.self, forKey: .instructions)
-
+        
         // Loop through ingredients and measurements
         let ingredientValues = try decoder.container(keyedBy: IngredientCodingKey.self)
         for i in 1...20 {
@@ -48,7 +49,7 @@ struct MealDetail: Codable, Identifiable {
 
             if let ingredientName = try? ingredientValues.decode(String.self, forKey: .init(stringValue: ingredientKey)!),
                let measurement = try? ingredientValues.decode(String.self, forKey: .init(stringValue: measurementKey)!) {
-                // Append ingredient if not empty
+                // Append ingredient if values not empty
                 if ingredientName != "" && measurement != "" {
                     let ingredientItem = Ingredient(name: ingredientName, measurement: measurement)
                     self.ingredients.append(ingredientItem)

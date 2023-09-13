@@ -34,6 +34,11 @@ struct MealDetailView: View {
                         }
                     }
                 }
+                .alert("Error fetching meal info.",
+                       isPresented: $mealDetailViewModel.showAlert) {
+                } message: {
+                    Text("Please check your Wi-Fi or mobile data and try again.")
+                }
             }
         }
     }
